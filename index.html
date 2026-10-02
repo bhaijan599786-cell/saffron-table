@@ -1,138 +1,194 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f3f1e9">
-    <meta name="description" content="Independent freelance web development for international businesses: responsive websites, landing pages, e-commerce, redesigns, and UI improvements.">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="[YOUR NAME] | Freelance Web Developer">
-    <meta property="og:description" content="Responsive websites, landing pages, and thoughtful redesigns for businesses worldwide.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
-    <title>[YOUR NAME] | Freelance Web Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f1f6fb">
+    <meta name="description" content="NexaFlow brings your team's work, workflows, and momentum into one clear workspace.">
+    <title>NexaFlow — Make work flow</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://images.unsplash.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <script type="application/ld+json">
-        {"@context":"https://schema.org","@type":"Person","name":"[YOUR NAME]","jobTitle":"Freelance Web Developer","knowsAbout":["Web Development","UI/UX Design","Responsive Design","E-commerce"]}
-    </script>
 </head>
 <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="demo-banner">Portfolio concept · Fictional product and companies</div>
     <header class="site-header">
-        <nav class="navbar wrap" aria-label="Main navigation">
-            <a class="brand" href="#home" aria-label="[YOUR NAME], home"><span class="brand-icon" aria-hidden="true">↗</span><span>[YOUR NAME]<span aria-hidden="true">.</span></span></a>
-            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false"><span></span></button>
-            <ul class="nav-links" id="primary-navigation">
-                <li><a href="#home">Home</a></li><li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li>
-            </ul>
-            <a class="nav-cta" href="#contact">Start a project <span aria-hidden="true">↗</span></a>
+        <nav class="nav-shell" aria-label="Main navigation">
+            <a class="brand" href="#top" aria-label="NexaFlow home">
+                <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span>Nexa<span class="brand-light">Flow</span></span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation">
+                <span></span><span></span>
+            </button>
+            <div class="nav-menu" id="primary-menu">
+                <div class="nav-links">
+                    <a href="#features">Platform</a>
+                    <a href="#how-it-works">How it works</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="nav-actions">
+                    <a class="nav-login" href="#contact">Talk to us</a>
+                    <a class="button button-small button-dark" href="#pricing">Explore plans <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main id="main-content">
-        <section class="hero" id="home" aria-labelledby="hero-title">
-            <div class="hero-grid wrap">
-                <div class="hero-content js-reveal">
-                    <p class="availability">International projects welcome</p>
-                    <h1 id="hero-title">I Build Modern Websites That <em>Grow Businesses</em></h1>
-                    <p class="hero-copy">I partner with businesses and founders worldwide to design and build responsive websites that make their next step clear.</p>
-                    <div class="hero-actions"><a class="button" href="#contact">Start a Project <span aria-hidden="true">↗</span></a><a class="button button-light" href="#projects">View My Work <span aria-hidden="true">↓</span></a></div>
-                    <div class="hero-proof"><div class="proof-copy"><strong>Clear communication. Thoughtful builds.</strong>Remote collaboration for businesses worldwide</div></div>
+    <main id="top">
+        <section class="hero section-wrap">
+            <div class="hero-copy reveal">
+                <div class="eyebrow"><span class="eyebrow-dot"></span> THE WORKSPACE THAT WORKS WITH YOU</div>
+                <h1>Less busywork.<br><span>More brilliant work.</span></h1>
+                <p class="hero-description">Bring projects, people, and processes into one beautifully clear workspace. NexaFlow helps your team move forward, together.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#contact">Get a product tour <span aria-hidden="true">↗</span></a>
+                    <a class="button button-quiet" href="#how-it-works"><span class="play-icon" aria-hidden="true">▶</span> See how it works</a>
                 </div>
-                <div class="hero-visual js-reveal">
-                    <img class="hero-photo" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Light-filled creative studio with a large shared work table" fetchpriority="high" width="1100" height="900">
-                    <div class="hero-stamp" aria-hidden="true"><span>Thoughtful by design. Made for your goals.</span></div>
-                    <p class="hero-caption">Independent by choice · Worldwide by default</p>
-                    <div class="hero-note"><strong>Make it<br>matter.</strong><span>Digital experiences with a point of view.</span></div>
+                <div class="hero-footnote"><span class="check-mark" aria-hidden="true">✓</span> A portfolio concept. No sign-up or product access is available.</div>
+            </div>
+            <div class="hero-visual reveal" aria-label="Illustration of the NexaFlow project dashboard">
+                <div class="visual-orbit orbit-one"></div>
+                <div class="visual-orbit orbit-two"></div>
+                <div class="dashboard-window">
+                    <div class="dash-topbar">
+                        <div class="window-controls"><i></i><i></i><i></i></div>
+                        <span class="dash-workspace">NEXAFLOW <span>/</span> WORKSPACE</span>
+                        <span class="dash-top-icon">···</span>
+                    </div>
+                    <div class="dash-layout">
+                        <aside class="dash-sidebar">
+                            <div class="dash-side-logo"><span class="mini-mark">N</span><span>Northstar Studio</span><b>⌄</b></div>
+                            <div class="side-label">WORKSPACE</div>
+                            <div class="side-item active"><span>▦</span> Overview</div>
+                            <div class="side-item"><span>◫</span> My work <i>3</i></div>
+                            <div class="side-item"><span>◷</span> Timeline</div>
+                            <div class="side-label side-label-spaced">YOUR SPACE</div>
+                            <div class="side-item"><span class="project-dot dot-blue"></span> Website refresh</div>
+                            <div class="side-item"><span class="project-dot dot-green"></span> Launch campaign</div>
+                            <div class="side-item"><span class="project-dot dot-orange"></span> Brand system</div>
+                            <div class="side-bottom"><span class="avatar avatar-dark">JD</span><span>Jordan Davis<small>Workspace admin</small></span><b>···</b></div>
+                        </aside>
+                        <div class="dash-main">
+                            <div class="dash-welcome"><div><span class="dash-date">MONDAY, OCTOBER 14</span><h3>Good morning, Jordan <span>✳</span></h3><p>Here's what's moving across your workspace.</p></div><button class="dash-add">＋ New task</button></div>
+                            <div class="dash-stats">
+                                <div class="stat-card"><span>ACTIVE PROJECTS</span><strong>08</strong><small><i class="green-tiny"></i> All moving forward</small></div>
+                                <div class="stat-card"><span>OPEN TASKS</span><strong>24</strong><small>Across 4 projects</small></div>
+                                <div class="stat-card"><span>UP NEXT</span><strong>06<span class="stat-unit"> days</span></strong><small>Website launch</small></div>
+                            </div>
+                            <div class="dash-project-head"><div><strong>Project pulse</strong><span>Keep an eye on the big picture</span></div><a href="#product">View all <b>↗</b></a></div>
+                            <div class="project-row"><div class="project-symbol symbol-blue">✳</div><div class="project-name"><strong>Website refresh</strong><span>Design &amp; development</span></div><div class="progress-track"><i class="progress-blue"></i></div><span class="progress-value">72%</span><span class="avatar avatar-lilac">MK</span><span class="avatar avatar-peach">AL</span></div>
+                            <div class="project-row"><div class="project-symbol symbol-green">◈</div><div class="project-name"><strong>Launch campaign</strong><span>Marketing</span></div><div class="progress-track"><i class="progress-green"></i></div><span class="progress-value">48%</span><span class="avatar avatar-mint">JD</span><span class="avatar avatar-sand">+2</span></div>
+                            <div class="project-row"><div class="project-symbol symbol-orange">✦</div><div class="project-name"><strong>Brand system</strong><span>Design</span></div><div class="progress-track"><i class="progress-orange"></i></div><span class="progress-value">91%</span><span class="avatar avatar-peach">AL</span><span class="avatar avatar-lilac">MK</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-note"><span class="note-check">✓</span><span><strong>Nice momentum</strong><small>Your workspace is in sync</small></span><span class="note-spark">↗</span></div>
+                <div class="visual-caption"><span class="caption-line"></span> A clearer view of what matters</div>
+            </div>
+            <div class="hero-scroll" aria-hidden="true"><span></span> SCROLL TO EXPLORE</div>
+        </section>
+
+        <section class="trusted section-wrap reveal" aria-labelledby="trusted-title">
+            <p id="trusted-title">IMAGINED WITH TEAMS LIKE THESE <span>· FICTIONAL DEMO NAMES</span></p>
+            <div class="logo-strip" aria-label="Fictional demo company names">
+                <span class="wordmark wordmark-one">northstar<span>®</span></span>
+                <span class="wordmark wordmark-two"><i>▰</i> juniper</span>
+                <span class="wordmark wordmark-three">arc<span>/</span>well</span>
+                <span class="wordmark wordmark-four"><i>✳</i> form &amp; field</span>
+                <span class="wordmark wordmark-five">MORROW</span>
+            </div>
+        </section>
+
+        <section class="features section-pad" id="features">
+            <div class="section-wrap">
+                <div class="section-heading reveal">
+                    <div><div class="eyebrow"><span class="eyebrow-dot"></span> ONE SPACE, BETTER FLOW</div><h2>Everything in sync.<br><span>Everyone in the know.</span></h2></div>
+                    <p>Give good ideas room to grow. NexaFlow connects the moving parts of your work without adding more noise.</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card feature-card-large reveal">
+                        <div class="feature-art art-board"><div class="board-top"><span>Launch plan</span><span>•••</span></div><div class="board-columns"><div class="board-column"><b>TO DO <i>3</i></b><div class="board-task"><span class="task-tag tag-pink">CONTENT</span><strong>Outline launch story</strong><small><i class="tiny-avatar">AL</i> · Oct 18</small></div><div class="board-task"><span class="task-tag tag-blue">DESIGN</span><strong>Review landing page</strong><small><i class="tiny-avatar tiny-lilac">MK</i> · Oct 20</small></div></div><div class="board-column"><b>IN PROGRESS <i>2</i></b><div class="board-task task-highlight"><span class="task-tag tag-green">STRATEGY</span><strong>Map launch channels</strong><small><i class="tiny-avatar tiny-mint">JD</i> · Oct 21</small></div><div class="board-task task-muted"><span class="task-tag tag-orange">CONTENT</span><strong>Draft product email</strong><small><i class="tiny-avatar">AL</i> · Oct 23</small></div></div></div></div>
+                        <div class="feature-text"><span class="feature-number">01 / PROJECTS</span><h3>See the whole picture.</h3><p>Plan projects in a way that makes sense to your team. Boards, timelines, and clear ownership keep the next step in view.</p></div>
+                    </article>
+                    <article class="feature-card reveal">
+                        <div class="feature-art art-automation"><div class="automation-node node-trigger"><span>◷</span><div><b>When a task is</b><small>marked complete</small></div></div><div class="automation-connector"></div><div class="automation-node node-action"><span>✳</span><div><b>Let the team know</b><small>Send a channel update</small></div><i>↗</i></div><div class="automation-label">YOUR WORKFLOW, ON AUTOPILOT</div></div>
+                        <div class="feature-text"><span class="feature-number">02 / AUTOMATIONS</span><h3>Make repeat work disappear.</h3><p>Connect everyday steps with simple automations, so good work keeps moving while your team focuses.</p></div>
+                    </article>
+                    <article class="feature-card reveal">
+                        <div class="feature-art art-insights"><div class="insights-head"><span>Workspace activity</span><span>Last 7 days⌄</span></div><div class="insights-total">A steady rhythm <i>↗</i></div><div class="chart-area"><div class="chart-y"><span>high</span><span>mid</span><span>low</span></div><div class="chart-bars"><i style="--bar:42%"></i><i style="--bar:56%"></i><i style="--bar:48%"></i><i style="--bar:70%"></i><i style="--bar:63%"></i><i style="--bar:85%"></i><i style="--bar:75%"></i><i style="--bar:92%"></i><i style="--bar:80%"></i><i style="--bar:100%"></i><i style="--bar:89%"></i><i style="--bar:100%"></i></div></div><div class="chart-x"><span>MON</span><span>WED</span><span>FRI</span><span>SUN</span></div></div>
+                        <div class="feature-text"><span class="feature-number">03 / CLARITY</span><h3>Turn updates into insight.</h3><p>Spot blockers and celebrate progress with a live view of work in motion, not another spreadsheet to maintain.</p></div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="trust-strip" aria-label="Website services"><div class="trust-row wrap"><span class="trust-label">Websites shaped around your business</span><div class="trust-logos"><span>Business</span><span>Landing pages</span><span>Restaurants</span><span>Real estate</span><span>Portfolios</span></div></div></section>
-
-        <section class="section services-section" id="services" aria-labelledby="services-title">
-            <div class="wrap">
-                <div class="services-top js-reveal"><div><p class="section-kicker">What I can help with</p><h2 class="section-heading" id="services-title">Built around your <em>next move.</em></h2></div><p class="section-copy">Work directly with a freelance developer on a clear, responsive website tailored to your audience, goals, and market, wherever your business is based.</p></div>
-                <div class="service-grid">
-                    <article class="service-card js-reveal"><span class="service-number">01 / STRATEGY + BUILD</span><span class="service-symbol" aria-hidden="true">↗</span><h3>Business Websites</h3><p>Responsive, easy-to-navigate websites that explain your offer and help customers take the next step.</p></article>
-                    <article class="service-card js-reveal"><span class="service-number">02 / FOCUSED + FAST</span><span class="service-symbol" aria-hidden="true">◎</span><h3>Landing Pages</h3><p>Focused campaign pages with clear messaging, considered layouts, and a strong path to action.</p></article>
-                    <article class="service-card js-reveal"><span class="service-number">03 / BUILT FOR YOUR AUDIENCE</span><span class="service-symbol" aria-hidden="true">◇</span><h3>Restaurant &amp; Property Sites</h3><p>Useful, polished websites for restaurants, real-estate businesses, and local services.</p></article>
-                    <article class="service-card js-reveal"><span class="service-number">04 / A FRESH START</span><span class="service-symbol" aria-hidden="true">⌁</span><h3>Redesign &amp; UI Improvements</h3><p>Improve structure, responsive behavior, and visual clarity without losing what makes your brand yours.</p></article>
+        <section class="how-section section-pad" id="how-it-works">
+            <div class="section-wrap how-layout">
+                <div class="how-intro reveal"><div class="eyebrow"><span class="eyebrow-dot"></span> A BETTER WAY TO GET THERE</div><h2>From scattered<br>to <span>in sync.</span></h2><p>Make your team's best work easier to do. It starts with a workspace that feels like yours.</p><a class="text-link" href="#contact">Let's find your flow <span>↗</span></a></div>
+                <div class="steps-list">
+                    <article class="step reveal"><span class="step-index">01</span><div><h3>Bring your work together</h3><p>Gather tasks, project notes, and team conversations in one calm, connected place.</p></div><span class="step-icon">⌘</span></article>
+                    <article class="step reveal"><span class="step-index">02</span><div><h3>Shape a flow that fits</h3><p>Build a rhythm around the way your team thinks, plans, and gets things done.</p></div><span class="step-icon">◒</span></article>
+                    <article class="step reveal"><span class="step-index">03</span><div><h3>Keep good work moving</h3><p>Make progress visible, decisions clearer, and handoffs feel a little more human.</p></div><span class="step-icon">↗</span></article>
                 </div>
             </div>
         </section>
 
-        <section class="section projects-section" id="projects" aria-labelledby="projects-title">
-            <div class="wrap">
-                <div class="projects-heading js-reveal"><div><p class="section-kicker">Selected concepts</p><h2 class="section-heading" id="projects-title">A few things <em>made with care.</em></h2></div><a class="button button-light" href="#contact">Have a project in mind? <span aria-hidden="true">↗</span></a></div>
-                <div class="project-grid">
-                    <article class="project-card js-reveal"><div class="project-image"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1100&amp;q=80" alt="Thoughtfully plated dinner in a warm restaurant" loading="lazy" width="1100" height="760"><span class="project-tag">Concept project</span></div><div class="project-meta"><div><h3>Saffron Table</h3><p>Restaurant website concept focused on atmosphere, menu discovery, and reservations.</p></div></div><div class="project-actions"><button class="project-demo" type="button" data-live-demo-url="[ADD LIVE DEMO URL]" aria-describedby="demo-note-saffron" disabled>Live Demo <span aria-hidden="true">↗</span></button><a class="project-discuss" href="#contact" data-project="Restaurant Website">Discuss this concept</a></div><p class="project-demo-note" id="demo-note-saffron">Add this project's URL in <code>data-live-demo-url</code> to enable the demo.</p></article>
-                    <article class="project-card js-reveal"><div class="project-image"><img src="https://images.unsplash.com/photo-1600598463926-d611a51f4c1c?auto=format&amp;fit=crop&amp;w=1100&amp;q=80" alt="Contemporary home with a carefully landscaped garden" loading="lazy" width="1100" height="760"><span class="project-tag">Concept project</span></div><div class="project-meta"><div><h3>PrimeNest Properties</h3><p>Real-estate website concept for browsing property details with clarity.</p></div></div><div class="project-actions"><button class="project-demo" type="button" data-live-demo-url="[ADD LIVE DEMO URL]" aria-describedby="demo-note-primenest" disabled>Live Demo <span aria-hidden="true">↗</span></button><a class="project-discuss" href="#contact" data-project="Real Estate Website">Discuss this concept</a></div><p class="project-demo-note" id="demo-note-primenest">Add this project's URL in <code>data-live-demo-url</code> to enable the demo.</p></article>
-                    <article class="project-card js-reveal"><div class="project-image"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;w=850&amp;q=80" alt="Modern gym floor with professional training equipment" loading="lazy" width="850" height="620"><span class="project-tag">Concept project</span></div><div class="project-meta"><div><h3>IRONFIT</h3><p>Fitness website concept presenting programs, trainers, and membership options.</p></div></div><div class="project-actions"><button class="project-demo" type="button" data-live-demo-url="[ADD LIVE DEMO URL]" aria-describedby="demo-note-ironfit" disabled>Live Demo <span aria-hidden="true">↗</span></button><a class="project-discuss" href="#contact" data-project="Gym Website">Discuss this concept</a></div><p class="project-demo-note" id="demo-note-ironfit">Add this project's URL in <code>data-live-demo-url</code> to enable the demo.</p></article>
-                    <article class="project-card js-reveal"><div class="project-image"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=850&amp;q=80" alt="Bright, contemporary office space" loading="lazy" width="850" height="620"><span class="project-tag">Concept project</span></div><div class="project-meta"><div><h3>NexaWorks</h3><p>Corporate website concept for a digital services company.</p></div></div><div class="project-actions"><button class="project-demo" type="button" data-live-demo-url="[ADD LIVE DEMO URL]" aria-describedby="demo-note-nexa" disabled>Live Demo <span aria-hidden="true">↗</span></button><a class="project-discuss" href="#contact" data-project="Business Website">Discuss this concept</a></div><p class="project-demo-note" id="demo-note-nexa">Add this project's URL in <code>data-live-demo-url</code> to enable the demo.</p></article>
-                    <article class="project-card js-reveal"><div class="project-image"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&amp;fit=crop&amp;w=850&amp;q=80" alt="Minimal creative workspace with plants and warm light" loading="lazy" width="850" height="620"><span class="project-tag">Concept project</span></div><div class="project-meta"><div><h3>[YOUR NAME] Portfolio</h3><p>Portfolio website concept for presenting services and selected work.</p></div></div><div class="project-actions"><button class="project-demo" type="button" data-live-demo-url="[ADD LIVE DEMO URL]" aria-describedby="demo-note-portfolio" disabled>Live Demo <span aria-hidden="true">↗</span></button><a class="project-discuss" href="#contact" data-project="Personal Portfolio">Discuss this concept</a></div><p class="project-demo-note" id="demo-note-portfolio">Add this project's URL in <code>data-live-demo-url</code> to enable the demo.</p></article>
+        <section class="product-section section-pad" id="product">
+            <div class="section-wrap">
+                <div class="product-heading reveal"><div class="eyebrow"><span class="eyebrow-dot"></span> YOUR TEAM, IN FOCUS</div><h2>Big picture energy.<br><span>Little details handled.</span></h2><p>See what's happening across your workspace, then zoom in on exactly what needs you.</p></div>
+                <div class="product-preview reveal">
+                    <div class="preview-toolbar"><div class="preview-brand"><span class="mini-mark">N</span> Northstar Studio <b>⌄</b></div><div class="preview-breadcrumb">Projects <span>/</span> Website refresh</div><div class="preview-tools"><span>⌕</span><span>◉</span><i class="avatar avatar-lilac">MK</i><i class="avatar avatar-peach">AL</i><button>＋ Invite</button></div></div>
+                    <div class="preview-body"><div class="preview-side"><span class="side-label">PROJECT</span><b>Website refresh</b><span class="preview-side-link active">▦ Overview</span><span class="preview-side-link">☷ Board</span><span class="preview-side-link">◷ Timeline</span><span class="preview-side-link">▤ Files</span><div class="preview-side-bottom"><span class="project-dot dot-blue"></span>On track<span class="status-pill">IN MOTION</span></div></div>
+                        <div class="preview-content"><div class="preview-project-title"><div><span class="project-label">WEBSITE REFRESH <span>· PRODUCT</span></span><h3>A home for what's next.</h3></div><button>•••</button></div><div class="preview-tabs"><span class="selected">Overview</span><span>Board</span><span>Timeline</span><span>Files <i>4</i></span></div>
+                            <div class="preview-content-grid"><div class="preview-main-column"><div class="preview-card preview-progress"><div class="preview-card-title"><b>Project progress</b><span>Updated just now</span></div><div class="progress-meta"><strong>72<span>%</span></strong><small>of the project is in motion</small></div><div class="wide-progress"><i></i></div><div class="progress-legend"><span><i class="legend-done"></i>Completed <b>18</b></span><span><i class="legend-open"></i>In progress <b>07</b></span><span><i class="legend-later"></i>Up next <b>09</b></span></div></div>
+                                    <div class="preview-card task-preview"><div class="preview-card-title"><b>Up next</b><a href="#contact">See all ↗</a></div><div class="preview-task-row"><i class="task-check"></i><span><b>Finalize homepage copy</b><small>CONTENT · DUE OCT 18</small></span><i class="tiny-avatar">AL</i></div><div class="preview-task-row"><i class="task-check"></i><span><b>Mobile layout review</b><small>DESIGN · DUE OCT 20</small></span><i class="tiny-avatar tiny-lilac">MK</i></div><div class="preview-task-row"><i class="task-check task-checked">✓</i><span><b>Approve visual direction</b><small>DESIGN · COMPLETED</small></span><i class="tiny-avatar tiny-mint">JD</i></div></div></div>
+                                <div class="preview-aside"><div class="preview-card date-card"><span>NEXT MILESTONE</span><div class="calendar-date"><i>OCT</i><b>24</b></div><strong>Design sign-off</strong><small>Thursday · 2:00 PM</small></div><div class="preview-card team-card"><div class="preview-card-title"><b>Project team</b><span>＋</span></div><div class="team-person"><i class="tiny-avatar">AL</i><span><b>Alex Lee</b><small>Design lead</small></span><i class="online-dot"></i></div><div class="team-person"><i class="tiny-avatar tiny-lilac">MK</i><span><b>Morgan Kim</b><small>Product design</small></span><i class="online-dot"></i></div><div class="team-person"><i class="tiny-avatar tiny-mint">JD</i><span><b>Jordan Davis</b><small>Project owner</small></span><i class="online-dot"></i></div></div></div></div>
+                        </div>
+                    </div>
                 </div>
+                <p class="demo-note">Illustrative product UI · Demo content only</p>
             </div>
         </section>
 
-        <section class="section about-section" id="about" aria-labelledby="about-title">
-            <div class="about-grid wrap">
-                <div class="about-image-wrap js-reveal"><img class="about-image" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Creative team collaborating around a laptop" loading="lazy" width="1000" height="900"><span class="about-image-label">Small studio energy. One-to-one care.</span></div>
-                <div class="about-content js-reveal"><p class="section-kicker">A bit about me</p><h2 class="section-heading" id="about-title">Good websites start with <em>good questions.</em></h2><p class="about-copy">I’m [YOUR NAME], a freelance web developer working with international businesses, founders, and independent professionals. I build responsive business websites, landing pages, restaurant and real-estate sites, portfolios, and thoughtful redesigns.</p><p class="about-copy">[ADD A SHORT BIO ABOUT YOUR EXPERIENCE, PROCESS, AND HOW YOU WORK WITH CLIENTS.]</p>
-                    <div class="about-stats" aria-label="How I work"><div class="about-stat"><strong>Global</strong><span>Remote collaboration</span></div><div class="about-stat"><strong>Direct</strong><span>Work with your developer</span></div><div class="about-stat"><strong>Tailored</strong><span>Scope to suit your goals</span></div></div>
-                    <div class="skills" aria-label="Skills"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span><span>UI/UX</span></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section testimonials-section" id="testimonials" aria-labelledby="testimonials-title">
-            <div class="wrap"><div class="testimonial-top js-reveal"><div><p class="section-kicker">Client feedback</p><h2 class="section-heading" id="testimonials-title">The best part is <em>working together.</em></h2></div><p class="sample-note">Demo content only. Replace these cards with approved, verifiable client testimonials before publishing.</p></div>
-                <div class="testimonial-grid">
-                    <article class="testimonial-card js-reveal"><span class="testimonial-label">Sample Testimonial · Demo Content</span><blockquote>[Add an approved client quote about the collaboration and process.]</blockquote><div class="client"><div><strong>[CLIENT NAME]</strong><span>[Company / role, with permission]</span></div></div></article>
-                    <article class="testimonial-card js-reveal"><span class="testimonial-label">Sample Testimonial · Demo Content</span><blockquote>[Add an approved client quote about the website or project.]</blockquote><div class="client"><div><strong>[CLIENT NAME]</strong><span>[Company / role, with permission]</span></div></div></article>
-                    <article class="testimonial-card js-reveal"><span class="testimonial-label">Sample Testimonial · Demo Content</span><blockquote>[Add an approved client quote about communication and delivery.]</blockquote><div class="client"><div><strong>[CLIENT NAME]</strong><span>[Company / role, with permission]</span></div></div></article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section pricing-section" id="packages" aria-labelledby="pricing-title">
-            <div class="wrap"><div class="pricing-header js-reveal"><div><p class="section-kicker">Straightforward starting points</p><h2 class="section-heading" id="pricing-title">A good place to <em>begin.</em></h2></div><p class="section-copy">Every project is different. These sample packages help set expectations; final pricing follows a proper conversation.</p></div>
+        <section class="pricing-section section-pad" id="pricing">
+            <div class="section-wrap">
+                <div class="pricing-heading reveal"><div><div class="eyebrow"><span class="eyebrow-dot"></span> PLANS THAT MAKE SENSE</div><h2>Room to do your<br><span>best work.</span></h2></div><p>Example pricing for this portfolio concept. No plans are available for purchase.</p></div>
                 <div class="pricing-grid">
-                    <article class="price-card js-reveal"><div class="price-tier">The Essential</div><p class="price">$XXX<small> / starting from</small></p><p class="price-description">For a new idea that needs a clear, considered first home.</p><ul class="price-list"><li>One-page website</li><li>Responsive design</li><li>Contact form setup</li><li>Agreed revision scope</li></ul><a class="button button-light" href="#contact" data-project="Landing Page">Ask about this package <span aria-hidden="true">↗</span></a></article>
-                    <article class="price-card featured js-reveal"><div class="price-tier">The Signature</div><p class="price">$XXX<small> / starting from</small></p><p class="price-description">For a business ready for a more complete web presence.</p><ul class="price-list"><li>Multi-page website</li><li>Custom visual direction</li><li>SEO-ready foundations</li><li>Agreed revision scope</li></ul><a class="button" href="#contact" data-project="Business Website">Ask about this package <span aria-hidden="true">↗</span></a></article>
-                    <article class="price-card js-reveal"><div class="price-tier">The Commerce</div><p class="price">$XXX<small> / starting from</small></p><p class="price-description">For a product business planning to sell online.</p><ul class="price-list"><li>Storefront design and build</li><li>Product and collection setup</li><li>Responsive shopping experience</li><li>Launch handover</li></ul><a class="button button-light" href="#contact" data-project="E-commerce Website">Ask about this package <span aria-hidden="true">↗</span></a></article>
+                    <article class="price-card reveal"><span class="plan-kicker">A GOOD PLACE TO START</span><h3>Starter</h3><p>For small teams finding their flow.</p><div class="price"><strong>$0</strong><span> / user / month</span></div><a class="button button-outline" href="#contact">Ask about Starter <span>↗</span></a><div class="plan-divider"></div><span class="plan-includes">A thoughtful starting point</span><ul><li><i>✓</i> Up to 5 team members</li><li><i>✓</i> Unlimited active projects</li><li><i>✓</i> Boards and task lists</li><li><i>✓</i> Basic project overview</li></ul></article>
+                    <article class="price-card price-featured reveal"><span class="popular-tag">MOST FLEXIBLE</span><span class="plan-kicker">FOR TEAMS IN THEIR ELEMENT</span><h3>Team</h3><p>For growing teams ready to find momentum.</p><div class="price"><strong>$12</strong><span> / user / month</span></div><a class="button button-primary price-cta" href="#contact">Discuss Team plan <span>↗</span></a><div class="plan-divider"></div><span class="plan-includes">Everything in Starter, plus</span><ul><li><i>✓</i> Unlimited team members</li><li><i>✓</i> Workflow automations</li><li><i>✓</i> Timeline and workload views</li><li><i>✓</i> Custom fields and insights</li><li><i>✓</i> Priority support</li></ul></article>
+                    <article class="price-card reveal"><span class="plan-kicker">BUILT AROUND YOUR WORLD</span><h3>Scale</h3><p>For organizations with bigger needs.</p><div class="price price-custom"><strong>Let's talk</strong></div><a class="button button-outline" href="#contact">Talk to our team <span>↗</span></a><div class="plan-divider"></div><span class="plan-includes">Everything in Team, plus</span><ul><li><i>✓</i> Advanced access controls</li><li><i>✓</i> Workspace-level reporting</li><li><i>✓</i> Dedicated onboarding</li><li><i>✓</i> Custom integrations</li></ul></article>
+                </div>
+                <p class="pricing-disclaimer">Illustrative plans and pricing for demo purposes only. This is not a live SaaS product.</p>
+            </div>
+        </section>
+
+        <section class="faq-section section-pad" id="faq">
+            <div class="section-wrap faq-layout">
+                <div class="faq-intro reveal"><div class="eyebrow"><span class="eyebrow-dot"></span> GOOD QUESTIONS</div><h2>Curious?<br><span>Good.</span></h2><p>Here's a little more about the NexaFlow concept.</p><a class="text-link" href="#contact">Ask us something <span>↗</span></a></div>
+                <div class="faq-list">
+                    <details class="faq-item reveal" open><summary>What is NexaFlow?<span class="faq-plus"></span></summary><p>NexaFlow is a fictional project and team workspace concept created for a portfolio demo. The product screens and features shown here are illustrative.</p></details>
+                    <details class="faq-item reveal"><summary>Can I create an account or try the product?<span class="faq-plus"></span></summary><p>Not on this demo page. There is no live product or account system behind the concept.</p></details>
+                    <details class="faq-item reveal"><summary>Are the companies and pricing real?<span class="faq-plus"></span></summary><p>No. Company names, people, plans, and prices are fictional demo content. They are not customer endorsements or commercial offers.</p></details>
+                    <details class="faq-item reveal"><summary>Can NexaFlow connect to my team's tools?<span class="faq-plus"></span></summary><p>Integrations are part of the product concept, not a currently available service. Use the contact details on this page to get in touch about the portfolio project.</p></details>
                 </div>
             </div>
         </section>
 
-        <section class="section faq-section" aria-labelledby="faq-title"><div class="faq-grid wrap"><div class="js-reveal"><p class="section-kicker">A few helpful answers</p><h2 class="section-heading" id="faq-title">Before we <em>get going.</em></h2><p class="section-copy">Not sure what you need yet? That’s a perfectly good place to start.</p></div><div class="faq-list js-reveal">
-            <details><summary>How does a project usually work?</summary><p>We start with a short discovery call, agree on goals and scope, then move through structure, design, development, and launch with clear check-ins along the way.</p></details>
-            <details><summary>How long will my website take?</summary><p>A focused landing page often takes two to three weeks. A larger business website typically takes four to eight weeks, depending on content and feedback.</p></details>
-            <details><summary>Can you work with clients internationally?</summary><p>Absolutely. Projects are handled remotely with clear milestones, shared notes, and meeting times agreed across time zones.</p></details>
-            <details><summary>Will I be able to update the website?</summary><p>Yes. The handover is tailored to the build, with a walkthrough and practical notes so you know how to manage the content you own.</p></details>
-        </div></div></section>
-
-        <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-            <div class="contact-grid wrap">
-                <div class="contact-copy js-reveal"><p class="section-kicker">Have a project in mind?</p><h2 class="section-heading" id="contact-title">Let’s build <em>it.</em></h2><p class="section-copy">Share your brief, audience, and timeline. I welcome enquiries from businesses and teams worldwide.</p>
-                    <div class="contact-details"><a class="contact-item" href="#contact-form" data-contact-email="[YOUR EMAIL]"><span class="contact-icon" aria-hidden="true">@</span><span><small>Email · add address before publishing</small><strong>[YOUR EMAIL]</strong></span></a><a class="contact-item" href="#contact-form" data-contact-whatsapp="[YOUR WHATSAPP]"><span class="contact-icon" aria-hidden="true">WA</span><span><small>WhatsApp · add number before publishing</small><strong>[YOUR WHATSAPP]</strong></span></a><p class="contact-item"><span class="contact-icon" aria-hidden="true">LOC</span><span><small>Location</small><strong>[YOUR LOCATION]</strong></span></p></div>
-                </div>
-                <form class="contact-form js-reveal" id="contact-form" aria-describedby="form-note">
-                    <div class="form-field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required></div><div class="form-field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-                    <div class="form-field full"><label for="project-interest">What do you have in mind?</label><select id="project-interest" name="project" required><option value="" disabled selected>Select a project type</option><option>Business Website</option><option>Landing Page</option><option>E-commerce Website</option><option>Website Redesign</option><option>Restaurant Website</option><option>Real Estate Website</option><option>Gym Website</option><option>Personal Portfolio</option><option>Something else</option></select></div>
-                    <div class="form-field full"><label for="budget">Approximate budget</label><select id="budget" name="budget" required><option value="" disabled selected>Select a budget range</option><option>Under $1,000</option><option>$1,000–$3,000</option><option>$3,000–$7,500</option><option>$7,500+</option><option>Not sure yet</option></select></div>
-                    <div class="form-field full"><label for="message">A few project details</label><textarea id="message" name="message" minlength="10" maxlength="3000" placeholder="What are you hoping to build? (At least 10 characters)" required></textarea></div><p class="form-note" id="form-note">Demo only: this form does not send messages. Connect an email or form service before publishing.</p><p class="form-status" id="form-status" role="status" aria-live="polite"></p><button class="button" type="submit">Send project enquiry <span aria-hidden="true">↗</span></button>
-                </form>
-            </div>
-            <div class="wrap map-wrap"><div class="map-placeholder"><span class="map-title">[YOUR LOCATION]</span><span class="map-caption">Available for remote projects worldwide</span></div></div>
+        <section class="contact-section section-wrap" id="contact">
+            <div class="contact-panel reveal"><div class="contact-pattern" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="contact-content"><div class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> THIS IS WHERE THE CONVERSATION STARTS</div><h2>Make room for<br><span>what's next.</span></h2><p>This is a portfolio concept, but your next great project is real. Let's talk about making it flow.</p><a class="button button-white" href="https://wa.me/923282138353" target="_blank" rel="noreferrer">WhatsApp <span>↗</span></a> <a class="button button-white" href="mailto:ilyasjatoi103@gmail.com">Email <span>↗</span></a><small>WhatsApp: +92 328 2138353 · Email: ilyasjatoi103@gmail.com</small></div><div class="contact-decoration" aria-hidden="true"><div class="deco-ring ring-a"></div><div class="deco-ring ring-b"></div><div class="deco-core"><span class="brand-mark"><i></i><i></i><i></i></span></div><span class="deco-spark spark-one">✳</span><span class="deco-spark spark-two">✳</span></div></div>
         </section>
     </main>
 
-    <a class="whatsapp-float" href="#contact" data-contact-whatsapp="[YOUR WHATSAPP]" aria-label="WhatsApp contact placeholder; add your number before publishing" hidden>WA</a>
-    <footer class="site-footer"><div class="wrap"><div class="footer-top"><div class="footer-brand"><a class="brand" href="#home"><span class="brand-icon" aria-hidden="true">↗</span><span>[YOUR NAME]<span aria-hidden="true">.</span></span></a><p>Freelance web development for businesses and teams worldwide.</p></div><div class="footer-links"><div class="footer-column"><h2>Explore</h2><ul><li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li><li><a href="#about">About</a></li><li><a href="#packages">Packages</a></li></ul></div><div class="footer-column"><h2>Say hello</h2><ul><li><a href="#contact-form" data-contact-email="[YOUR EMAIL]">[YOUR EMAIL]</a></li><li><a href="#contact-form" data-contact-whatsapp="[YOUR WHATSAPP]">[YOUR WHATSAPP]</a></li><li><a href="#contact" data-profile-url="[YOUR LINKEDIN URL]">[YOUR LINKEDIN URL]</a></li><li><a href="#contact" data-profile-url="[YOUR GITHUB URL]">[YOUR GITHUB URL]</a></li><li><a href="#contact" data-profile-url="[YOUR INSTAGRAM URL]">[YOUR INSTAGRAM URL]</a></li></ul></div></div></div><div class="footer-bottom"><span>© <span id="year"></span> [YOUR NAME].</span><a href="#home">Back to top ↑</a><span>Designed with intention. Built for the web.</span></div></div></footer>
+    <footer class="site-footer">
+        <div class="section-wrap footer-main"><div class="footer-brand-col"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Nexa<span class="brand-light">Flow</span></span></a><p>A portfolio concept for teams<br>ready to find their flow.</p><span class="footer-demo">FICTIONAL PRODUCT DEMO</span></div><div class="footer-links"><div><b>Explore</b><a href="#features">Platform</a><a href="#how-it-works">How it works</a><a href="#product">Product view</a></div><div><b>Details</b><a href="#pricing">Example pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><div><b>Say hello</b>
+                    <a href="mailto:ilyasjatoi103@gmail.com">ilyasjatoi103@gmail.com</a>
+                    <a href="https://wa.me/923282138353" target="_blank" rel="noreferrer">WhatsApp: +92 328 2138353 ↗</a>
+                </div></div></div>
+        <div class="section-wrap footer-bottom"><span>© <span id="current-year">2026</span> NexaFlow · Fictional portfolio concept</span><a href="#top">Back to top ↑</a><span>Designed for the way work moves.</span></div>
+    </footer>
 </body>
 </html>

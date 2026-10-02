@@ -1,128 +1,52 @@
 const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+const navigationMenu = document.querySelector('.nav-menu');
+const navigationLinks = document.querySelectorAll('.nav-menu a');
 
-function closeMenu() {
-    if (!menuToggle || !navLinks) return;
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'Open navigation');
-    navLinks.classList.remove('is-open');
-    document.body.classList.remove('menu-open');
+function setMenuOpen(isOpen) {
+    if (!menuToggle || !navigationMenu) return;
+
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    navigationMenu.classList.toggle('is-open', isOpen);
+    document.body.classList.toggle('menu-open', isOpen);
 }
 
-if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', String(!isExpanded));
-        menuToggle.setAttribute('aria-label', isExpanded ? 'Open navigation' : 'Close navigation');
-        navLinks.classList.toggle('is-open', !isExpanded);
-        document.body.classList.toggle('menu-open', !isExpanded);
-    });
+menuToggle?.addEventListener('click', () => {
+    const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+    setMenuOpen(!isOpen);
+});
 
-    navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+navigationLinks.forEach((link) => {
+    link.addEventListener('click', () => setMenuOpen(false));
+});
 
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
-            closeMenu();
-            menuToggle.focus();
-        }
-    });
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setMenuOpen(false);
+});
 
-    const desktopQuery = window.matchMedia('(min-width: 761px)');
-    if (desktopQuery.addEventListener) {
-        desktopQuery.addEventListener('change', closeMenu);
-    } else {
-        desktopQuery.addListener(closeMenu);
+document.addEventListener('click', (event) => {
+    if (menuToggle?.getAttribute('aria-expanded') !== 'true') return;
+    if (!navigationMenu?.contains(event.target) && !menuToggle?.contains(event.target)) {
+        setMenuOpen(false);
     }
-}
+});
 
-const revealItems = document.querySelectorAll('.js-reveal');
-if ('IntersectionObserver' in window) {
+const year = document.querySelector('#current-year');
+if (year) year.textContent = new Date().getFullYear();
+
+const revealElements = document.querySelectorAll('.reveal');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if ('IntersectionObserver' in window && !prefersReducedMotion) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
         });
     }, { threshold: 0.12 });
-    revealItems.forEach((item) => revealObserver.observe(item));
+
+    revealElements.forEach((element) => revealObserver.observe(element));
 } else {
-    revealItems.forEach((item) => item.classList.add('is-visible'));
+    revealElements.forEach((element) => element.classList.add('is-visible'));
 }
-
-function isConfiguredPlaceholder(value) {
-    return Boolean(value && !value.includes('[') && !value.includes(']'));
-}
-
-document.querySelectorAll('[data-live-demo-url]').forEach((button) => {
-    const value = button.dataset.liveDemoUrl.trim();
-    let demoUrl;
-    try {
-        demoUrl = new URL(value);
-    } catch {
-        button.disabled = true;
-    }
-    if (!demoUrl || demoUrl.protocol !== 'https:' || !isConfiguredPlaceholder(value)) {
-        button.disabled = true;
-        return;
-    }
-    button.disabled = false;
-    const note = document.getElementById(button.getAttribute('aria-describedby'));
-    if (note) note.textContent = 'Opens the project preview in a new tab.';
-    button.addEventListener('click', () => window.open(demoUrl.href, '_blank', 'noopener,noreferrer'));
-});
-
-document.querySelectorAll('[data-project]').forEach((link) => {
-    link.addEventListener('click', () => {
-        const projectField = document.querySelector('#project-interest');
-        if (projectField) projectField.value = link.dataset.project;
-    });
-});
-
-document.querySelectorAll('[data-contact-email]').forEach((link) => {
-    const email = link.dataset.contactEmail.trim();
-    if (isConfiguredPlaceholder(email) && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        link.href = `mailto:${email}`;
-    }
-});
-
-document.querySelectorAll('[data-contact-whatsapp]').forEach((link) => {
-    const number = link.dataset.contactWhatsapp.trim();
-    const digits = number.replace(/\D/g, '');
-    if (isConfiguredPlaceholder(number) && /^\d{8,15}$/.test(digits)) {
-        link.href = `https://wa.me/${digits}`;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        if (link.classList.contains('whatsapp-float')) {
-            link.hidden = false;
-            link.setAttribute('aria-label', 'Chat on WhatsApp');
-        }
-    }
-});
-
-document.querySelectorAll('[data-profile-url]').forEach((link) => {
-    const value = link.dataset.profileUrl.trim();
-    try {
-        const profileUrl = new URL(value);
-        if (isConfiguredPlaceholder(value) && profileUrl.protocol === 'https:') {
-            link.href = profileUrl.href;
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-        }
-    } catch {
-        link.href = '#contact';
-    }
-});
-
-const contactForm = document.querySelector('#contact-form');
-const formStatus = document.querySelector('#form-status');
-if (contactForm && formStatus) {
-    contactForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        if (!contactForm.reportValidity()) return;
-        formStatus.textContent = 'Demo only: your details were not sent. Connect an email or form service before publishing.';
-    });
-}
-
-const year = document.querySelector('#year');
-if (year) year.textContent = new Date().getFullYear();
